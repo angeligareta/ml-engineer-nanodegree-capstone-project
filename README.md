@@ -6,6 +6,7 @@ Welcome to the Capstone Project for the AWS Machine Learning Engineer Nanodegree
 
 - **Source Code**: The complete codebase for the project is located in the [source folder](src/).
 - **Project Report**: The comprehensive report detailing the project's findings and methodology can be found [here](docs/capstone_project_report.pdf).
+- **Nanodegree certificate**: The nanodegree completion certificate can be found [here](docs/certificate.pdf).
 
 ## Project Overview
 The focal point of this project is the analysis of customer behavior within the Starbucks rewards mobile app. The aim is to comprehend the reaction of customers to various promotional offers, taking into account their unique demographics and historical interactions. This understanding will enable Starbucks to fine-tune its marketing strategies, boost customer engagement, and augment revenue. 
