@@ -1,4 +1,4 @@
-<h1 align="center">AWS Machine Learning Engineer Nanodegree: Capstone Project</h1>
+<h1 align="center">AWS Machine Learning Engineer Nanodegree<br/>Capstone Project</h1>
 
 <p align="center">
   <img alt="AWS" src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white">
