@@ -1,17 +1,21 @@
-# Capstone Project - AWS Machine Learning Engineer Nanodegree
+<h1 align="center">AWS Machine Learning Engineer Nanodegree: Capstone Project</h1>
 
-Welcome to the Capstone Project for the AWS Machine Learning Engineer Nanodegree. This repository contains all the resources related to the project.
+<p align="center">
+  <img alt="AWS" src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white">
+  <img alt="Udacity" src="https://img.shields.io/badge/Udacity-grey?style=for-the-badge&logo=udacity&logoColor=15B8E6">
+  <img alt="License" src="https://img.shields.io/github/license/angeligareta/ml-engineer-nanodegree-capstone-project?style=for-the-badge" />
+</p>
+
+## Project Overview
+The focal point of this project is the analysis of customer behavior within the Starbucks rewards mobile app. The aim is to comprehend the reaction of customers to various promotional offers, taking into account their unique demographics and historical interactions. This understanding will enable Starbucks to fine-tune its marketing strategies, boost customer engagement, and augment revenue. 
+
+The issue at hand is the recognition of demographic groups that exhibit a positive response to specific promotional offers from Starbucks. Given the variety of offers Starbucks sends to its rewards mobile app users, the response rate can differ among customer segments. The task is to delve into customer demographics and preferences, utilizing these insights to predict the probability of a user completing a promotional offer post-viewing.
 
 ## Project Resources
 
 - **Source Code**: The complete codebase for the project is located in the [source folder](src/).
 - **Project Report**: The comprehensive report detailing the project's findings and methodology can be found [here](docs/capstone_project_report.pdf).
 - **Nanodegree certificate**: The nanodegree completion certificate can be found [here](docs/certificate.pdf).
-
-## Project Overview
-The focal point of this project is the analysis of customer behavior within the Starbucks rewards mobile app. The aim is to comprehend the reaction of customers to various promotional offers, taking into account their unique demographics and historical interactions. This understanding will enable Starbucks to fine-tune its marketing strategies, boost customer engagement, and augment revenue. 
-
-The issue at hand is the recognition of demographic groups that exhibit a positive response to specific promotional offers from Starbucks. Given the variety of offers Starbucks sends to its rewards mobile app users, the response rate can differ among customer segments. The task is to delve into customer demographics and preferences, utilizing these insights to predict the probability of a user completing a promotional offer post-viewing.
 
 ## Proposed Solution
 To tackle the issue, a machine learning model will be developed to predict the probability of a user completing a promotional offer after viewing it, taking into account their demographic details and past interaction history. The model will utilize customer data to determine which specific promotional offer features will be most effective for a particular customer segment. 
@@ -20,7 +24,15 @@ A heuristic benchmark will be set by examining the historical response rate data
 
 ## Project Methodology 
 
-The methodology for this project involves several crucial steps. Initially, the data will be cleaned, preprocessed, and formatted. Subsequently, exploratory data analysis will be conducted to identify trends, correlations, and potential features for the machine learning model. This will be followed by feature engineering to enhance the model's predictive performance. SageMaker AutoGluon will be employed for automated model selection, comparing multiple algorithms on the validation set to identify the optimal model. This model will be trained and its hyperparameters fine-tuned using SageMaker's capabilities. The model's performance will be assessed on the test set and compared to a benchmark model. Lastly, the findings will be discussed, offering insights into customer behavior and their response to different offers.
+The methodology for this project involves several crucial steps. 
+
+Initially, the data will be cleaned, preprocessed, and formatted. Subsequently, exploratory data analysis will be conducted to identify trends, correlations, and potential features for the machine learning model. The details of these steps can be found in the [data_processing notebook](src/data_processing.ipynb).
+
+Next, SageMaker AutoGluon will be employed for automated model selection, comparing multiple algorithms on the validation set to identify the optimal model. The process and results of this step are documented in the [model_selection notebook](src/model_selection.ipynb).
+
+The chosen model will then be trained and its hyperparameters fine-tuned using SageMaker's capabilities. The specifics of this process are outlined in the [model_training notebook](src/model_training.ipynb).
+
+Lastly, the model's performance will be assessed on the test set and compared to a benchmark model. We will also deep dive on the model features and their SHAP feature importances, offering insights into customer behavior and their response to different offers. The results and analysis of this step can be found in the [model_evaluation notebook](src/model_evaluation.ipynb).
 
 ## Conclusions
 
@@ -29,14 +41,14 @@ The LightGBM model developed, which was designed to predict if a customer will c
 The Precision-Recall and ROC curves further corroborate the model's performance, assessing its capacity to differentiate between customers who will and will not complete an offer. The model has achieved a PR AUC score of about 0.644 and an ROC AUC score of around 0.780. These scores suggest a high proficiency in identifying customers who will finalize an offer after viewing it, and a superior ability to distinguish between customers who completed the offer and those who did not.
 
 The model also provides several key insights about the features that have a higher predictive power for identifying customers that will complete an offer:
-- Reward: Moderate rewards increase offer completion likelihood, particularly among long-term members. No reward or high rewards decrease this likelihood.
-- Membership Days: Long-term members are more inclined to complete offers.
-- Social Channel: The social channel is the most effective for sharing offers, outperforming web, mobile, and email.
-- Income: Middle-income customers are more likely to complete offers, especially with increased rewards. Low and high-income customers show a decreased likelihood of offer completion.
-- Difficulty: Easier offers are more likely to be completed.
-- Duration, Offer Type: These factors do not significantly influence offer completion.
-- Gender: Non-male customers are more likely to complete offers, especially those with higher rewards. Male customers are less likely.
-- Age: Customers older than 40 are more likely to complete offers, especially those with higher rewards. Younger customers are less likely.
+- **Reward**: Moderate rewards increase offer completion likelihood, particularly among long-term members. No reward or high rewards decrease this likelihood.
+- **Membership Days**: Long-term members are more inclined to complete offers.
+- **Social Channel**: The social channel is the most effective for sharing offers, outperforming web, mobile, and email.
+- **Income**: Middle-income customers are more likely to complete offers, especially with increased rewards. Low and high-income customers show a decreased likelihood of offer completion.
+- **Difficulty**: Easier offers are more likely to be completed.
+- **Duration, Offer Type**: These factors do not significantly influence offer completion.
+- **Gender**: Non-male customers are more likely to complete offers, especially those with higher rewards. Male customers are less likely.
+- **Age**: Customers older than 40 are more likely to complete offers, especially those with higher rewards. Younger customers are less likely.
 
 These insights should guide marketing strategies. However, it's crucial to ensure fairness and non-discrimination based on gender or age. When tailoring offers based on these insights, ethical implications and business objectives should be taken into account.
 
